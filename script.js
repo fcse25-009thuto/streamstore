@@ -227,7 +227,7 @@ function renderCartPage() {
   if (tbody) {
     tbody.innerHTML = cart.map(item => `
       <tr>
-        <td>
+        <td data-label="Product">
           <div class="cart-page-item">
             <img src="${item.image}" alt="${item.name}">
             <div class="cart-page-item-info">
@@ -236,16 +236,16 @@ function renderCartPage() {
             </div>
           </div>
         </td>
-        <td>P${item.price.toFixed(2)}</td>
-        <td>
+        <td data-label="Price">P${item.price.toFixed(2)}</td>
+        <td data-label="Qty">
           <div class="cart-item-qty">
             <button onclick="changeQty(${item.id}, -1)"><i class="bi bi-dash"></i></button>
             <span>${item.qty}</span>
             <button onclick="changeQty(${item.id}, 1)"><i class="bi bi-plus"></i></button>
           </div>
         </td>
-        <td class="fw-bold" style="color:#46d369">P${(item.price * item.qty).toFixed(2)}</td>
-        <td><button class="btn btn-sm text-muted" onclick="removeFromCart(${item.id})"><i class="bi bi-x-lg"></i></button></td>
+        <td data-label="Total" class="fw-bold" style="color:#46d369">P${(item.price * item.qty).toFixed(2)}</td>
+        <td data-label=""><button class="btn btn-sm text-muted" onclick="removeFromCart(${item.id})"><i class="bi bi-x-lg"></i></button></td>
       </tr>
     `).join('');
   }
