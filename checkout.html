@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - StreamStore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-play-fill text-danger"></i> STREAMSTORE
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" class="form-control bg-transparent border-0 text-white" placeholder="Search products...">
+          </div>
+          <button class="btn btn-sm position-relative" id="cartBtn" type="button">
+            <i class="bi bi-cart3 fs-5 text-white"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Checkout Page -->
+  <section class="checkout-page">
+    <div class="container-fluid px-4">
+      <h1 class="fw-bold mb-1">Checkout</h1>
+      <p class="text-muted small mb-4">Complete your purchase securely.</p>
+
+      <div class="row g-4">
+        <!-- Billing / Shipping Form -->
+        <div class="col-lg-8">
+          <div class="checkout-form">
+            <!-- Step 1: Shipping -->
+            <div class="checkout-step">
+              <div class="checkout-step-number">1</div>
+              <div><h6>Shipping Address</h6><small>Where should we send your order?</small></div>
+            </div>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label>First Name</label>
+                <input type="text" class="form-control checkout-name" id="checkoutFirstName" placeholder="John">
+                <div class="error-msg" id="firstNameErr">Only letters allowed.</div>
+              </div>
+              <div class="col-md-6">
+                <label>Last Name</label>
+                <input type="text" class="form-control checkout-name" id="checkoutLastName" placeholder="Smith">
+                <div class="error-msg" id="lastNameErr">Only letters allowed.</div>
+              </div>
+              <div class="col-12">
+                <label>Email Address</label>
+                <input type="email" class="form-control" placeholder="name@example.co.bw">
+              </div>
+              <div class="col-12">
+                <label>Phone Number</label>
+                <input type="tel" class="form-control" placeholder="+267 71 234 5678">
+              </div>
+              <div class="col-12">
+                <label>Street Address</label>
+                <input type="text" class="form-control" placeholder="123 Mall Road">
+              </div>
+              <div class="col-md-5">
+                <label>City</label>
+                <input type="text" class="form-control" placeholder="Gaborone">
+              </div>
+              <div class="col-md-4">
+                <label>District / Town</label>
+                <input type="text" class="form-control" list="stateList" id="stateInput" placeholder="Type to select district...">
+                <datalist id="stateList">
+                  <option value="Central District">
+                  <option value="Chobe District">
+                  <option value="Francistown">
+                  <option value="Gaborone">
+                  <option value="Ghanzi District">
+                  <option value="Jwaneng">
+                  <option value="Kgalagadi District">
+                  <option value="Kgatleng District">
+                  <option value="Kweneng District">
+                  <option value="Lobatse">
+                  <option value="Molepolole">
+                  <option value="Maun">
+                  <option value="Mogoditshane">
+                  <option value="Moshupa">
+                  <option value="North-East District">
+                  <option value="North-West District">
+                  <option value="Orapa">
+                  <option value="Palapye">
+                  <option value="Ramotswa">
+                  <option value="Selibe Phikwe">
+                  <option value="Serowe">
+                  <option value="South-East District">
+                  <option value="Southern District">
+                  <option value="Sowa Town">
+                  <option value="Tlokweng">
+                </datalist>
+              </div>
+              <div class="col-md-3">
+                <label>Postal Code</label>
+                <input type="text" class="form-control" placeholder="e.g. 0000 or P.O. Box">
+              </div>
+            </div>
+
+            <!-- Step 2: Payment -->
+            <div class="checkout-step">
+              <div class="checkout-step-number">2</div>
+              <div><h6>Payment Method</h6><small>Choose how to pay</small></div>
+            </div>
+            <div class="mb-4">
+              <div class="payment-option selected mb-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="payment" id="payCredit" checked>
+                  <label class="form-check-label w-100" for="payCredit">
+                    <i class="bi bi-credit-card me-2"></i> Credit / Debit Card
+                  </label>
+                </div>
+              </div>
+              <div class="payment-option mb-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="payment" id="payPaypal">
+                  <label class="form-check-label w-100" for="payPaypal">
+                    <i class="bi bi-paypal me-2"></i> PayPal
+                  </label>
+                </div>
+              </div>
+              <div class="payment-option">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="payment" id="payApple">
+                  <label class="form-check-label w-100" for="payApple">
+                    <i class="bi bi-apple me-2"></i> Apple Pay
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row g-3 mb-4">
+              <div class="col-12">
+                <label>Card Number</label>
+                <input type="text" class="form-control" placeholder="**** **** **** 4242">
+              </div>
+              <div class="col-md-4">
+                <label>Expiry</label>
+                <input type="text" class="form-control" placeholder="MM/YY">
+              </div>
+              <div class="col-md-4">
+                <label>CVV</label>
+                <input type="text" class="form-control" placeholder="***">
+              </div>
+              <div class="col-md-4">
+                <label>ZIP</label>
+                <input type="text" class="form-control" placeholder="10001">
+              </div>
+            </div>
+
+            <!-- Step 3: Confirm -->
+            <div class="checkout-step">
+              <div class="checkout-step-number">3</div>
+              <div><h6>Review & Confirm</h6><small>Double-check everything before ordering</small></div>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="termsCheck">
+              <label class="form-check-label" for="termsCheck">
+                I agree to the <a href="#" class="text-danger">Terms of Service</a> and <a href="#" class="text-danger">Privacy Policy</a>
+              </label>
+            </div>
+            <button class="btn btn-danger w-100 fw-bold py-2 rounded-1" onclick="completeCheckout()">
+              <i class="bi bi-lock-fill me-2"></i>PLACE ORDER
+            </button>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-lg-4">
+          <div class="cart-summary">
+            <h5>Order Summary</h5>
+            <div id="checkoutItems"></div>
+            <hr class="border-secondary border-opacity-25 my-2">
+            <div class="summary-row"><span>Subtotal</span><span id="checkoutSubtotal">P0.00</span></div>
+            <div class="summary-row"><span>Shipping</span><span id="checkoutShipping">P9.99</span></div>
+            <div class="summary-row"><span>Tax</span><span id="checkoutTax">P0.00</span></div>
+            <div class="summary-row total"><span>Total</span><span id="checkoutTotal">P0.00</span></div>
+          </div>
+          <div class="mt-3 d-flex align-items-center gap-2 text-muted" style="font-size:0.75rem;">
+            <i class="bi bi-shield-check text-success"></i>
+            Secure checkout via SSL encryption
+          </div>
+          <div class="mt-2">
+            <a href="cart.html" class="text-muted text-decoration-none small"><i class="bi bi-arrow-left me-1"></i> Return to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 border-top border-secondary border-opacity-25 mt-5">
+    <div class="container-fluid px-4">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <h5 class="fw-bold mb-3"><i class="bi bi-play-fill text-danger"></i> STREAMSTORE</h5>
+          <p class="text-muted small">Your premium digital marketplace for top-quality products at unbeatable prices.</p>
+        </div>
+        <div class="col-6 col-md-2"><h6 class="fw-bold">Shop</h6><ul class="list-unstyled text-muted small"><li>Electronics</li><li>Fashion</li><li>Accessories</li><li>Gaming</li></ul></div>
+        <div class="col-6 col-md-2"><h6 class="fw-bold">Help</h6><ul class="list-unstyled text-muted small"><li>FAQ</li><li>Shipping</li><li>Returns</li><li><a href="contact.html" class="text-muted text-decoration-none">Contact</a></li></ul></div>
+        <div class="col-6 col-md-2"><h6 class="fw-bold">Company</h6><ul class="list-unstyled text-muted small"><li>About</li><li>Careers</li><li>Press</li><li>Privacy</li></ul></div>
+        <div class="col-6 col-md-3"><h6 class="fw-bold">Follow Us</h6><div class="d-flex gap-3 fs-5"><i class="bi bi-facebook"></i><i class="bi bi-instagram"></i><i class="bi bi-twitter-x"></i><i class="bi bi-youtube"></i></div></div>
+      </div>
+      <hr class="my-4 border-secondary border-opacity-25">
+      <p class="text-center text-muted small mb-0">&copy; 2026 StreamStore. All rights reserved. | Gaborone, Botswana</p>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h5 class="fw-bold mb-0">Your Cart <span class="badge bg-danger ms-2" id="cartSidebarCount">0</span></h5>
+      <button class="btn btn-sm text-white" id="closeCart"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="text-center text-muted py-5" id="emptyCart">
+        <i class="bi bi-cart3 fs-1 d-block mb-3"></i>
+        <p>Your cart is empty.</p>
+        <small>Add some products to get started!</small>
+      </div>
+      <div id="cartItems"></div>
+    </div>
+    <div class="cart-footer">
+      <div class="d-flex justify-content-between mb-2">
+        <span>Total:</span>
+        <span class="fw-bold fs-5" id="cartTotal">P0.00</span>
+      </div>
+      <a href="cart.html" class="btn btn-danger w-100 fw-bold rounded-1">VIEW CART</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function lettersOnly(input, errId) {
+      input.addEventListener('input', function() {
+        const err = document.getElementById(errId);
+        this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+        if (!this.value.trim()) {
+          this.classList.add('error');
+          err.classList.add('show');
+        } else {
+          this.classList.remove('error');
+          err.classList.remove('show');
+        }
+      });
+    }
+    lettersOnly(document.getElementById('checkoutFirstName'), 'firstNameErr');
+    lettersOnly(document.getElementById('checkoutLastName'), 'lastNameErr');
+  </script>
+</body>
+</html>

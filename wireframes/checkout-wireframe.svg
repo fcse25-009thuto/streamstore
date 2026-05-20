@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Inter, Arial, sans-serif">
+  <rect width="800" height="600" fill="#141414"/>
+  
+  <!-- Navbar -->
+  <rect x="0" y="0" width="800" height="50" fill="#1a1a1a"/>
+  <line x1="0" y1="50" x2="800" y2="50" stroke="#333" stroke-width="1"/>
+  <rect x="15" y="12" width="20" height="26" fill="#e50914" rx="3"/>
+  <text x="40" y="30" font-size="13" font-weight="bold" fill="#fff">STREAMSTORE</text>
+  <text x="155" y="30" font-size="11" fill="#aaa">Home</text>
+  <text x="200" y="30" font-size="11" fill="#aaa">Shop</text>
+  <text x="245" y="30" font-size="11" fill="#aaa">Cart</text>
+  <text x="305" y="30" font-size="11" fill="#e50914" font-weight="bold">Checkout</text>
+  <text x="375" y="30" font-size="11" fill="#aaa">Contact</text>
+  <circle cx="750" cy="25" r="8" fill="#333"/>
+  <circle cx="756" cy="19" r="5" fill="#e50914"/>
+  
+  <!-- Page title -->
+  <text x="20" y="78" font-size="22" font-weight="bold" fill="#fff">Checkout</text>
+  <text x="20" y="98" font-size="11" fill="#aaa">Complete your purchase securely.</text>
+  
+  <!-- Main layout: Form (left) + Summary (right) -->
+  
+  <!-- Checkout Form -->
+  <rect x="15" y="110" width="500" height="475" fill="#1f1f1f" rx="8"/>
+  
+  <!-- Step 1: Shipping -->
+  <circle cx="40" cy="140" r="14" fill="#e50914"/>
+  <text x="35" y="145" font-size="11" font-weight="bold" fill="#fff">1</text>
+  <text x="60" y="138" font-size="14" font-weight="bold" fill="#fff">Shipping Address</text>
+  <text x="60" y="155" font-size="10" fill="#aaa">Where should we send your order?</text>
+  
+  <!-- Form fields -->
+  <!-- First/Last Name row -->
+  <text x="30" y="188" font-size="10" fill="#ccc">First Name</text>
+  <rect x="30" y="193" width="230" height="32" fill="#2a2a2a" rx="4"/>
+  <text x="38" y="214" font-size="10" fill="#666">John</text>
+  <text x="270" y="188" font-size="10" fill="#ccc">Last Name</text>
+  <rect x="270" y="193" width="230" height="32" fill="#2a2a2a" rx="4"/>
+  <text x="278" y="214" font-size="10" fill="#666">Smith</text>
+  
+  <!-- Email -->
+  <text x="30" y="245" font-size="10" fill="#ccc">Email Address</text>
+  <rect x="30" y="250" width="470" height="32" fill="#2a2a2a" rx="4"/>
+  <text x="38" y="271" font-size="10" fill="#666">john@example.co.bw</text>
+  
+  <!-- Phone -->
+  <text x="30" y="302" font-size="10" fill="#ccc">Phone Number</text>
+  <rect x="30" y="307" width="470" height="32" fill="#2a2a2a" rx="4"/>
+  <text x="38" y="328" font-size="10" fill="#666">+267 71 234 5678</text>
+  
+  <!-- Address -->
+  <text x="30" y="360" font-size="10" fill="#ccc">Street Address</text>
+  <rect x="30" y="365" width="470" height="32" fill="#2a2a2a" rx="4"/>
+  <text x="38" y="386" font-size="10" fill="#666">123 Mall Road</text>
+  
+  <!-- City / District / Postal -->
+  <text x="30" y="417" font-size="10" fill="#ccc">City</text>
+  <rect x="30" y="422" width="150" height="32" fill="#2a2a2a" rx="4"/>
+  <text x="38" y="443" font-size="10" fill="#666">Gaborone</text>
+  <text x="190" y="417" font-size="10" fill="#ccc">District</text>
+  <rect x="190" y="422" width="160" height="32" fill="#2a2a2a" rx="4"/>
+  <text x="198" y="443" font-size="10" fill="#666">South-East District</text>
+  <text x="360" y="417" font-size="10" fill="#ccc">Postal Code</text>
+  <rect x="360" y="422" width="140" height="32" fill="#2a2a2a" rx="4"/>
+  <text x="368" y="443" font-size="10" fill="#666">P.O. Box 123</text>
+  
+  <!-- Step 2: Payment -->
+  <circle cx="40" cy="480" r="14" fill="#e50914"/>
+  <text x="35" y="485" font-size="11" font-weight="bold" fill="#fff">2</text>
+  <text x="60" y="478" font-size="14" font-weight="bold" fill="#fff">Payment Method</text>
+  <text x="60" y="495" font-size="10" fill="#aaa">Choose how to pay</text>
+  
+  <!-- Payment options -->
+  <rect x="30" y="508" width="470" height="30" fill="#2a2a2a" rx="4"/>
+  <circle cx="48" cy="523" r="6" fill="#e50914"/>
+  <text x="62" y="527" font-size="11" fill="#ccc">Credit / Debit Card</text>
+  
+  <rect x="30" y="543" width="470" height="30" fill="#222" rx="4"/>
+  <circle cx="48" cy="558" r="6" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="62" y="562" font-size="11" fill="#ccc">PayPal</text>
+  
+  <rect x="30" y="578" width="470" height="30" fill="#222" rx="4"/>
+  <circle cx="48" cy="593" r="6" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="62" y="597" font-size="11" fill="#ccc">Apple Pay</text>
+  
+  <!-- Order Summary (right panel) -->
+  <rect x="530" y="110" width="255" height="340" fill="#1f1f1f" rx="8"/>
+  <text x="545" y="138" font-size="14" font-weight="bold" fill="#fff">Order Summary</text>
+  
+  <!-- Items -->
+  <line x1="545" y1="148" x2="770" y2="148" stroke="#333" stroke-width="1"/>
+  
+  <!-- Item 1 -->
+  <rect x="545" y="158" width="40" height="40" fill="#333" rx="4"/>
+  <text x="548" y="175" font-size="8" fill="#666">IMG</text>
+  <text x="593" y="172" font-size="11" fill="#f0f0f0">Headphones</text>
+  <text x="593" y="186" font-size="9" fill="#888">Qty: 1</text>
+  <text x="720" y="172" font-size="11" font-weight="bold" fill="#46d369">P89.99</text>
+  
+  <!-- Item 2 -->
+  <rect x="545" y="208" width="40" height="40" fill="#333" rx="4"/>
+  <text x="548" y="225" font-size="8" fill="#666">IMG</text>
+  <text x="593" y="222" font-size="11" fill="#f0f0f0">Keyboard</text>
+  <text x="593" y="236" font-size="9" fill="#888">Qty: 1</text>
+  <text x="720" y="222" font-size="11" font-weight="bold" fill="#46d369">P79.99</text>
+  
+  <!-- Item 3 -->
+  <rect x="545" y="258" width="40" height="40" fill="#333" rx="4"/>
+  <text x="548" y="275" font-size="8" fill="#666">IMG</text>
+  <text x="593" y="272" font-size="11" fill="#f0f0f0">Mouse</text>
+  <text x="593" y="286" font-size="9" fill="#888">Qty: 2</text>
+  <text x="720" y="272" font-size="11" font-weight="bold" fill="#46d369">P79.98</text>
+  
+  <line x1="545" y1="310" x2="770" y2="310" stroke="#333" stroke-width="1"/>
+  
+  <!-- Totals -->
+  <text x="545" y="330" font-size="11" fill="#bbb">Subtotal</text>
+  <text x="720" y="330" font-size="11" fill="#bbb">P249.96</text>
+  <text x="545" y="350" font-size="11" fill="#bbb">Shipping</text>
+  <text x="720" y="350" font-size="11" fill="#bbb">P9.99</text>
+  <text x="545" y="370" font-size="11" fill="#bbb">Tax</text>
+  <text x="720" y="370" font-size="11" fill="#bbb">P20.00</text>
+  
+  <line x1="545" y1="380" x2="770" y2="380" stroke="#333" stroke-width="1"/>
+  <text x="545" y="400" font-size="14" font-weight="bold" fill="#fff">Total</text>
+  <text x="700" y="400" font-size="14" font-weight="bold" fill="#fff">P279.95</text>
+  
+  <!-- Secure badge -->
+  <circle cx="555" cy="430" r="8" fill="#4caf50"/>
+  <text x="570" y="434" font-size="9" fill="#aaa">Secure checkout via SSL encryption</text>
+</svg>

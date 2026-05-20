@@ -1,0 +1,6 @@
+*.ps1
+_test-*
+~$*
+test.docx
+StreamStore-Docs-v2.docx
+StreamStore-Docs.docx
